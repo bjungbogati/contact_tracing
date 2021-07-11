@@ -160,6 +160,9 @@ function(input, output, session) {
     # )
   })
   
+  outputOptions(output, "map", suspendWhenHidden = FALSE) 
+  
+  
   # A reactive expression that returns the set of zips that are
   # in bounds right now
   # zipsInBounds <- reactive({
