@@ -1,0 +1,28 @@
+library(shiny)
+
+url <- "http://202.51.3.120/data/query-custom-result"
+body <- '{"entity": "hl7.org.fhir/Encounter","entity-filter": {"wiseyak.org/Encounter.type": ["hl7.org.fhir/nCOV-CSR-SelfReport"]},"return-json": "Condition: <hl7.org.fhir/Encounter.status> <hl7.org.fhir/Encounter.subject>{ age: <hl7.org.fhir/Patient.age> <hl7.org.fhir/Patient.telecom>{ Contact: <hl7.org.fhir/ContactPoint.value>} <hl7.org.fhir/Patient.name>{ famName: <hl7.org.fhir/HumanName.family> givName: <hl7.org.fhir/HumanName.given>}} <hl7.org.fhir/Encounter.location>{<hl7.org.fhir/Encounter.location.location>{<hl7.org.fhir/Location.position>{latitude: <hl7.org.fhir/Location.position.latitude> longitude: <hl7.org.fhir/Location.position.longitude>}}}"}'
+r <- httr::POST(url = url, body = body, encode = "json")
+local_data <- jsonlite::fromJSON(httr::content(r, as="text"))
+
+
+saveRDS(local_data, "local_data.rds")
+
+function(input, output, session) {
+  
+  liveish_data <- reactive({
+    invalidateLater(100)
+    
+  })
+  
+  
+names(local_df) <- c("condition", "contact", "fam_name", "giv_name", "latitude", "longitude")
+  
+  
+  
+  output$dataTable <- renderTable({
+    data()
+  })
+}
+
+

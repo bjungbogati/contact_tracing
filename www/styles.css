@@ -1,0 +1,142 @@
+#map {
+    position: absolute;
+}
+
+.container-fluid {
+    padding: 0;
+}
+
+
+#signout {
+    background-color: transparent;
+    border-color:transparent;
+    color: #fff;
+    margin: 5px 0 0;
+    font-size: 17px;
+}
+
+input[type="number"] {
+  max-width: 80%;
+}
+
+div.outer {
+  position: fixed;
+  top: 41px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  padding: 0;
+}
+
+/* Customize fonts */
+body, label, input, button, select { 
+  font-family: 'Helvetica Neue', Helvetica;
+  font-weight: 200;
+}
+h1, h2, h3, h4 { font-weight: 400; }
+
+#controls {
+  /* Appearance */
+  background-color: white;
+  padding: 0 20px 20px 20px;
+  cursor: move;
+  /* Fade out while not hovering */
+  opacity: 0.65;
+  zoom: 0.9;
+  transition: opacity 500ms 1s;
+}
+#controls:hover {
+  /* Fade in while hovering */
+  opacity: 0.95;
+  transition-delay: 0;
+}
+
+/* Position and style citation */
+#cite {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  font-size: 12px;
+}
+
+/* If not using map tiles, show a white background */
+.leaflet-container {
+  background-color: white !important;
+}
+
+
+
+/*#signout {
+    background-color: transparent;
+    border-color:transparent;
+    color: #fff;
+    margin: 5px 0 0;
+    font-size: 17px;
+}
+*/
+
+#signin {
+  color: white;
+  background-color:#3c8dbc;
+  padding: 10px 15px; width: 150px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#signin:hover {
+  background-color: black;
+  color:white;
+
+}
+
+.shiny-notification {
+  position: fixed !important;
+  top: calc(85%) !important;
+  width: 200px !important;
+}
+
+.shiny-notification-message {
+    color: #000 !important;
+}
+
+.icons {
+  display: inline-block;
+  font-size: 30px;
+  padding: 10px;
+}
+
+.stitle {
+    display:inline-block;padding: 0 0 30px;color:#333; font-weight:600;
+}
+
+
+
+#loginpage{
+    position: absolute;
+    top: 20%;
+    left: 35%;
+    background: white;
+    width: 30%;
+    margin: auto;
+    padding: 50px 20px;
+    border: solid 2px #ccc;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px 0 rgb(0 0 0 / 20%), 0 6px 20px 0 rgb(0 0 0 / 19%);
+}
+
+@media only screen and (max-width: 800px) {
+#loginpage{
+     top: 0;
+    height: 100%;
+    left: 0;
+    border: 0;
+    background: white;
+    width: 100%;
+}
+}
+
+
+
+/* .small-box.bg-yellow { background-color: #FFFF00 !important; color: #000000 !important;}
