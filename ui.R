@@ -164,7 +164,7 @@ body2 <- dashboardBody(
 login_page <- div(
   id = "loginpage",
   icon("poll", class = "icons"),
-  tags$h2("UN Habitat Nepal", class = "text-center stitle"), br(),
+  tags$h2("Covid-19 - Contact Tracing", class = "text-center stitle"), br(),
   textInput("email_signin",
     placeholder = "Your email",
     label = tagList(icon("user"), "Email")
