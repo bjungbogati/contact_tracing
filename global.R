@@ -1,5 +1,5 @@
 
-pacman::p_load('shiny', 'shinydashboard', 'shinyBS' , 'leaflet', 'RColorBrewer', 'scales', 'lattice', 'dplyr', 'shinyjs', 'leaflet.extras', 'plotly', 'ggthemes', 'firebase', 'DT')
+pacman::p_load('sf', 'shiny', 'shinydashboard', 'shinyBS' , 'leaflet', 'RColorBrewer', 'scales', 'lattice', 'dplyr', 'shinyjs', 'leaflet.extras', 'plotly', 'ggthemes', 'firebase', 'DT')
 
 
 district <- readRDS("./data/district.rds")
